@@ -1,0 +1,2 @@
+$filePath = "c:\Users\bav\Documents\IISExpress\Logs\EVT2.log"
+.\LogParser.exe -i:W3C "SELECT Client-IP As Machine, REVERSEDNS(Client-Ip) As Name,COUNT(*) As Hits From $filePath GROUP BY Machine ORDER BY Hits DESC" -o:CSV
